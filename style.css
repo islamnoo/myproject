@@ -1,10 +1,104 @@
-h1{
-    color: rgb(0, 0, 0);
-}
 body{
-    background-color: aquamarine;
+    overflow: hidden;
 }
-p{
-    color: blueviolet;
-    font-size: larger;
+/* Container styling */
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.5s ease;
 }
+
+/* Side styling */
+.side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.5s ease;
+}
+
+/* Left side specific styling */
+.left-side {
+    width: 65%;
+    background-image: url(image.jpg);
+    background-size: 846px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Right side specific styling */
+.right-side {
+    width: 35%;
+background-color: #202068;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+/* Hidden checkbox */
+.toggle {
+    display: none;
+}
+
+/* Button styling */
+.action-btn {
+    padding: 15px 30px;
+    background-color: #202068    ;
+    color: white    ;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.action-btn:hover {
+    background-color: white;
+    color: #202068    ;
+}
+
+/* When checkbox is checked */
+#shrinkToggle:checked ~ .left-side {
+    width: 0%; 
+}
+
+#shrinkToggle:checked ~ .right-side {
+    width: 40%; 
+}
+.left-side{
+    z-index: 5;
+}
+.right-side{
+    z-index: 10;
+}
+.back-side{
+    z-index: 5;
+}
+.back-side {
+    width: 0%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#shrinkToggle:checked ~ .back-side {
+    width: 60%; 
+}
+div p.back{
+    font-size: 25px;
+}
+.go-back{
+    opacity: 0;
+}
+#shrinkToggle:checked ~ .go-back {
+    opacity: 1;
+}
+/*logo */
+.logo{
+    width:150px;
+}
+
