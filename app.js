@@ -1,9 +1,17 @@
-document.getElementById("joinButton").addEventListener("click", function() {
-    var button = this;
-    button.classList.add("clicked");
+const nextButtons = document.querySelectorAll('.next');
+const steps = document.querySelectorAll('.form-step');
+const submitButton = document.querySelector('.submit');
 
-    // Remove the animation class after it's done to allow replay
-    setTimeout(function() {
-        button.classList.remove("clicked");
-    }, 400); // Match this duration to the animation duration in CSS
+let currentStep = 0;
+
+nextButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        steps[currentStep].classList.remove('active');
+        currentStep++;
+        steps[currentStep].classList.add('active');
+    });
+});
+
+submitButton.addEventListener('click', () => {
+    alert('Form submitted successfully!');
 });

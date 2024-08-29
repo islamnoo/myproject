@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <title>recrutement cscc</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="try.css"/>
 </head>
 <body>
     <div class="container">
@@ -15,17 +14,96 @@
             <header>
                 <img src="logo.png" alt="CSCC Logo" class="logo">
             </header>
-            <h3>Hello there!</h3>
+            <h3 class="hello">Hello there!</h3>
             <p>We are happy to see you here</p>
-            <div class="go-back">
-                <h2>Registration Form for joining cscc club 2024 / 2025</h2>
-                <p>are you ready to join us? fill the next form and start your new journey with us ! we are waiting for you !!</p>
-
-            </div>
             <label for="shrinkToggle" class="action-btn">join us</label>
         </div>
         <div class="side back-side">
+            <!-- Step 1 -->
+            <div class="form-step active" id="step-1">
+                <div class="flex">
+                    <h3>Personnel Info</h3>
+                    <div class="label">
+                        <h2>first name:</h2>
+                        <input type="text" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="label">
+                        <h2>last name:</h2>
+                        <input type="text" placeholder="Enter your full last name" required>
+                    </div>
+                    <div class="label">
+                        <h2>Email:</h2>
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="label">
+                        <h2>phone number:</h2>
+                        <input type="tel" placeholder="Enter your phone number" required>
+                    </div>
+                    <button class="next">Next</button>
+                </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="form-step" id="step-2">
+            <h3>Academic Info</h3>
+            <div class="lebal">
+                <h2>university:</h2>
+                <input type="text" placeholder="Enter your university" required>
+            </div>
+            <div class="lebal">
+                <h2>field of study:</h2>
+                <input type="text" placeholder="Enter your field of study" required>
+            </div>
+            <div class="grade">
+                <form>
+                    <label>Grade Level:</label><br>
+                    
+                    <label>
+                        <input type="radio" name="grade" value="L1">
+                        L1 / ING first year
+                    </label><br>
+                    
+                    <label>
+                        <input type="radio" name="grade" value="L2">
+                        L2 / ING second year
+                    </label><br>
+                    
+                    <label>
+                        <input type="radio" name="grade" value="L3">
+                        L3 / ING third year
+                    </label><br>
+                    
+                    <label>
+                        <input type="radio" name="grade" value="M1">
+                        M1 / ING fourth year
+                    </label><br>
+                    
+                    <label>
+                        <input type="radio" name="grade" value="M2">
+                        M2 / ING fifth year
+                    </label>
+                </form>
+            </div>
+            <div class="lebal">
+                <h2>scientific interests:</h2>
+                <input type="text" placeholder="discribe your scientific interests" required>
+            </div>
+            <button class="next">Next</button>
+        </div>
+        <!-- Step 3 -->
+        <div class="form-step" id="step-3">
+            <h3>Additional Info</h3>
+            <div class="lebal">
+                <h2>elevant experience:</h2>
+                <textarea placeholder="Describe any relevant experience you have" class="last"></textarea>
+            </div>
+            <div class="lebal">
+                <h2>why join the club ?</h2>
+                <textarea placeholder="Explain why you want to join the scientific club" class="last"></textarea>
+            </div>
+            <button class="submit">Submit</button>
+        </div>
         </div>
     </div>
+    <script src="try.js"></script>
 </body>
 </html>

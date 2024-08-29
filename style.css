@@ -1,5 +1,6 @@
 body{
     overflow: hidden;
+    background-color: #F6F5FC;
 }
 /* Container styling */
 .container {
@@ -20,8 +21,10 @@ body{
 /* Left side specific styling */
 .left-side {
     width: 65%;
-    background-image: url(image.jpg);
-    background-size: 846px;
+    background-size: cover;
+    background-position: center;
+    animation: slide 30s infinite;
+    background-size: 1000px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -78,11 +81,10 @@ background-color: #202068;
     z-index: 5;
 }
 .back-side {
-    width: 0%;
+    width: 0px;
     flex-direction: column;
     display: flex;
-    justify-content: center;
-    align-items: center;
+
     
 }
 #shrinkToggle:checked ~ .back-side {
@@ -91,14 +93,78 @@ background-color: #202068;
 div p.back{
     font-size: 25px;
 }
-.go-back{
-    opacity: 0;
-}
-#shrinkToggle:checked ~ .go-back {
-    opacity: 1;
-}
 /*logo */
 .logo{
     width:150px;
 }
 
+
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+h3 {
+    color: #2d2d6d;
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    width: 160px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+button {
+    background-color: #2d2d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button.submit {
+    background-color: #2d2d6d;
+    margin-top: 15px;
+} 
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.label{
+    display:flex;
+    
+}
+.grade{
+    display: flex;
+    flex-direction: column;
+}
+.last{
+    width: 450px;
+    height: 110px;
+}
+
+@keyframes slide {
+    0%     { background-image: url('image.jpg');   }
+    16.66% { background-image: url('image.jpg');   }
+    16.67% { background-image: url('image-a.jpg'); }
+    33.33% { background-image: url('image-a.jpg'); }
+    33.34% { background-image: url('image-3.jpg'); }
+    50%    { background-image: url('image-3.jpg'); }
+    50.01% { background-image: url('image-4.jpg'); }
+    66.66% { background-image: url('image-4.jpg'); }
+    66.67% { background-image: url('image-5.jpg'); }
+    83.33% { background-image: url('image-5.jpg'); }
+    83.34% { background-image: url('image-6.jpg'); }
+    100%   { background-image: url('image-6.jpg'); }
+} 
+.hello{
+    color: white;
+}
