@@ -24,7 +24,7 @@ body{
     background-size: cover;
     background-position: center;
     animation: slide 30s infinite;
-    background-size: 1000px;
+    /* background-size: 1000px; */
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -82,10 +82,8 @@ background-color: #202068;
 }
 .back-side {
     width: 0px;
-    flex-direction: column;
     display: flex;
-
-    
+    justify-content: space-between;
 }
 #shrinkToggle:checked ~ .back-side {
     width: 60%; 
@@ -106,19 +104,20 @@ div p.back{
 
 .form-step.active {
     display: block;
+    width: 500px;
+    margin-left: 150px;
 }
 
 h3 {
-    color: #2d2d6d;
     margin-bottom: 20px;
 }
 
 input, textarea, select {
-    width: 160px;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border:  0px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 button {
     background-color: #2d2d6d;
@@ -134,12 +133,9 @@ button.submit {
     background-color: #2d2d6d;
     margin-top: 15px;
 } 
-.flex{
-    display: flex;
-    flex-direction: column;
-}
 .label{
-    display:flex;
+    display:inline-block;
+    margin: 5px;
     
 }
 .grade{
@@ -167,4 +163,30 @@ button.submit {
 } 
 .hello{
     color: white;
+}
+form{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+.next{
+    border: 2px solid #202068 ;
+}
+.next:hover{
+    background-color:white ;
+    color: #202068  ;
+    border: 2px solid #202068 ;
+}
+h3{
+    font-size: 30px;
+}
+#why{
+    width: 170px;
+    height: 20px;
+}
+input, textarea, select:focus{
+    border-color: #202068 ;
 }

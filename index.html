@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>recrutement cscc</title>
-    <link rel="stylesheet" href="try.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="container">
@@ -39,61 +39,62 @@
                         <h2>phone number:</h2>
                         <input type="tel" placeholder="Enter your phone number" required>
                     </div>
-                    <button class="next">Next</button>
+                    <br><br><br><button class="next">Next</button>
                 </div>
         </div>
         <!-- Step 2 -->
         <div class="form-step" id="step-2">
             <h3>Academic Info</h3>
-            <div class="lebal">
+            <div class="label">
                 <h2>university:</h2>
                 <input type="text" placeholder="Enter your university" required>
             </div>
-            <div class="lebal">
+            <div class="label">
                 <h2>field of study:</h2>
                 <input type="text" placeholder="Enter your field of study" required>
             </div>
-            <div class="grade">
-                <form>
-                    <label>Grade Level:</label><br>
+            <div class="label">
+                <h2>Grade Level:</h2>
+                <div class="grade">
+                    <form>
+                        <label>
+                            <input type="radio" name="grade" class="l" value="L1">
+                            L1 / ING first year
+                        </label><br>
                     
-                    <label>
-                        <input type="radio" name="grade" value="L1">
-                        L1 / ING first year
-                    </label><br>
+                        <label>
+                            <input type="radio" name="grade" class="l" value="L2">
+                            L2 / ING second year
+                        </label><br>
                     
-                    <label>
-                        <input type="radio" name="grade" value="L2">
-                        L2 / ING second year
-                    </label><br>
+                        <label>
+                            <input type="radio" name="grade" class="l" value="L3">
+                            L3 / ING third year
+                        </label><br>
                     
-                    <label>
-                        <input type="radio" name="grade" value="L3">
-                        L3 / ING third year
-                    </label><br>
+                        <label>
+                            <input type="radio" name="grade" class="l" value="M1">
+                            M1 / ING fourth year
+                        </label><br>
                     
-                    <label>
-                        <input type="radio" name="grade" value="M1">
-                        M1 / ING fourth year
-                    </label><br>
-                    
-                    <label>
-                        <input type="radio" name="grade" value="M2">
-                        M2 / ING fifth year
-                    </label>
-                </form>
+                        <label>
+                            <input type="radio" name="grade" class="l" value="M2">
+                            M2 / ING fifth year
+                        </label>
+                    </form>
+                </div>
             </div>
-            <div class="lebal">
+            <div class="label">
                 <h2>scientific interests:</h2>
-                <input type="text" placeholder="discribe your scientific interests" required>
+                <textarea placeholder="discribe your scientific interests" class="last" id="why"></textarea>
             </div>
-            <button class="next">Next</button>
+            <br><br><br><button class="next">Next</button>
         </div>
         <!-- Step 3 -->
         <div class="form-step" id="step-3">
             <h3>Additional Info</h3>
             <div class="lebal">
-                <h2>elevant experience:</h2>
+                <h2>relevant experience:</h2>
                 <textarea placeholder="Describe any relevant experience you have" class="last"></textarea>
             </div>
             <div class="lebal">
@@ -104,6 +105,6 @@
         </div>
         </div>
     </div>
-    <script src="try.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
